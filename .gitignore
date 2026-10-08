@@ -1,0 +1,9 @@
+# runtime / debug artifacts
+tiler.log
+tiler.cmd
+tiler.state
+tiler.classify
+hidden.txt
+selftest.txt
+*.dbg
+*.png
