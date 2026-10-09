@@ -33,6 +33,8 @@ Loop, %0%
         S.ini := SubStr(arg, 7)
     else if (arg = "--selftest")
         S.selftest := true
+    else if (arg = "--quit")
+        S.quitNow := true
 }
 Init()
 return
@@ -48,6 +50,12 @@ return
 Init() {
     global S
     S.dir := A_ScriptDir
+    ; --quit: starting a new instance already makes the running one shut down
+    ; cleanly (#SingleInstance Force); also un-hide anything a crash left behind
+    if (S.quitNow) {
+        RecoverHidden()
+        ExitApp
+    }
     LoadConfig()
     if (S.selftest) {
         SelfTest()

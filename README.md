@@ -18,6 +18,8 @@ nem biblioteca externa.
 2. Dê dois cliques em `tiler.ahk` (ou abra com o AutoHotkey v1).
 3. A barra aparece no topo de cada monitor e as janelas passam a ser organizadas.
 4. **Tecla de pânico: `Ctrl+Alt+Shift+Esc`** devolve todas as janelas escondidas e fecha o script.
+   Pela linha de comando, `AutoHotkeyU64.exe tiler.ahk --quit` faz o mesmo (também reexibe janelas
+   que ficaram escondidas depois de um crash).
 
 Para iniciar com o Windows, coloque um atalho do `tiler.ahk` em `shell:startup`.
 
